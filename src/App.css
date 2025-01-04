@@ -1,3 +1,11 @@
+html, body {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 .home-view {
     background-image: url('./assets/Tambayan-Grill.png');
     background-size: cover;

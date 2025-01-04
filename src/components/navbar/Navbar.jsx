@@ -6,7 +6,7 @@ import { IoIosCloseCircle } from 'react-icons/io';
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // Added state for menu open
+  const [menuOpen, setMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('home');
 
   const handleScroll = () => {
