@@ -15,7 +15,8 @@ html {
     text-align: left;
     width: 70%;
     font-size: 75px;
-    font-weight: 600;
+    font-weight: 800;
+    font-family: Poppins;
 }
 
 .hero h1 span {
@@ -33,18 +34,18 @@ html {
 .hero-action {
     display: flex;
     align-items: center;
-    font-size: 20px; 
+    font-size: 20px;
     font-weight: 500;
     margin-bottom: 10px;
 }
 
 .hero-connect {
-    padding: 10px 35px; 
+    padding: 10px 35px;
     font-family: serif;
     border-radius: 20px;
     border: 2px solid #DF8908;
     cursor: pointer;
-    color: #DF8908;
+    color: white;
 }
 
 .hero-connect:hover {
@@ -54,47 +55,15 @@ html {
 
 .icon-style {
     display: flex;
-    gap: 8px;
-}
-
-.btn-fb, .btn-insta {
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 15px 30px;
-    border-radius: 50px;
-    transition: 0.3s;
-    line-height: 1;
-    color: white;
-    border: 2px solid;
-    cursor: pointer;
-}
-
-.btn-fb {
-    border-color: #3b5998;
-}
-
-.btn-fb:hover {
-    background: #3b5998;
-    color: #fff;
-}
-
-.btn-insta {
-    border-color: #cd486b;
-}
-
-.btn-insta:hover {
-    background: linear-gradient(90deg, #f58529, #cd486b);
-    color: #fff;
+    gap: 10px;
+    margin-left: 20px;
 }
 
 @media(max-width: 850px) {
     .hero h1 {
         margin-top: 50px;
         width: 90%;
-        font-size: 45px; /* Reduced font size */
+        font-size: 45px;
     }
 
     .hero p {
@@ -105,7 +74,7 @@ html {
     }
 
     .hero-action {
-        gap: 12px; /* Reduced gap */
+        gap: 12px;
         font-size: 18px;
         font-weight: 500;
         margin-bottom: 20px;

@@ -51,7 +51,7 @@ const Navbar = () => {
   return (
     <div
       className={`navbar ${sticky ? 'sticky' : ''}`}
-      style={{ marginTop: sticky ? '0' : '30px' }}
+      style={{ marginTop: sticky ? '0' : '38px' }}
     >
       <div className="logo-container">
         <img src={logo} alt="logo" id="logo" />
@@ -71,7 +71,7 @@ const Navbar = () => {
               className={`nav-link ${activeLink === item ? 'active' : ''}`}
               onClick={() => {
                 setActiveLink(item);
-                closeMenu(); // Close the menu on link click
+                closeMenu(); 
               }}
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}

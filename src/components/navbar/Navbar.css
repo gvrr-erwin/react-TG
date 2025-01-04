@@ -9,14 +9,14 @@ html {
     padding: 10px 20px;
     width: 100%;
     position: relative;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.05);
     transition: all 0.3s ease;
 }
 
 .navbar.sticky {
     position: fixed;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(255, 255, 255, 0.05);
     z-index: 1000;
     width: 100%;
     margin-top: 0;
@@ -28,6 +28,15 @@ html {
     gap: 10px;
     color: white;
     margin-left: 25px;
+}
+
+.logo-container h1 {
+    font-family: serif;
+    color: #DA7C25;
+}
+
+.logo-container h1:hover {
+    color: white;
 }
 
 #logo {
@@ -58,13 +67,15 @@ html {
 
 .nav-menu a.active {
     color: #DA7C25;
-    border-bottom: 2px solid #DA7C25;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: 1.5px solid #DA7C25;
 }
 
 .nav-open {
     display: none;
     cursor: pointer;
-    color: white;
+    color: #DA7C25;
 }
 
 .nav-close {
@@ -72,7 +83,7 @@ html {
     position: absolute;
     top: 20px;
     right: 20px;
-    color: white;
+    color: #DA7C25;
     cursor: pointer;
 }
 
@@ -94,7 +105,7 @@ html {
     }
 
     .nav-menu.open {
-        right: 0; /* Show the menu when open */
+        right: 0;
     }
 
     .nav-close {
