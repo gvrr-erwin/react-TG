@@ -5,16 +5,22 @@ import { ImMenu } from 'react-icons/im';
 import { IoIosCloseCircle } from 'react-icons/io';
 
 const Navbar = () => {
+  const [sticky, setSticky] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // Added state for menu open
   const [activeLink, setActiveLink] = useState('home');
-  const menuRef = useRef();
 
-  const openMenu = () => {
-    menuRef.current.style.right = '0';
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setSticky(true);
+    } else {
+      setSticky(false);
+    }
   };
 
-  const closeMenu = () => {
-    menuRef.current.style.right = '-350px';
-  };
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll('section');
@@ -27,18 +33,26 @@ const Navbar = () => {
           }
         });
       },
-      { threshold: 0.5 } // Adjust this value for when the section is considered visible
+      { threshold: 0.5 }
     );
 
     sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-    };
+    return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
+  const openMenu = () => {
+    setMenuOpen(true);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
-    <div className="navbar">
+    <div
+      className={`navbar ${sticky ? 'sticky' : ''}`}
+      style={{ marginTop: sticky ? '0' : '30px' }}
+    >
       <div className="logo-container">
         <img src={logo} alt="logo" id="logo" />
         <h1>Tambayan Grill</h1>
@@ -46,7 +60,7 @@ const Navbar = () => {
       <div className="nav-open" onClick={openMenu}>
         <ImMenu />
       </div>
-      <ul className="nav-menu" ref={menuRef}>
+      <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
         <div className="nav-close" onClick={closeMenu}>
           <IoIosCloseCircle />
         </div>
@@ -55,7 +69,10 @@ const Navbar = () => {
             <a
               href={`#${item}`}
               className={`nav-link ${activeLink === item ? 'active' : ''}`}
-              onClick={() => setActiveLink(item)}
+              onClick={() => {
+                setActiveLink(item);
+                closeMenu(); // Close the menu on link click
+              }}
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}
             </a>

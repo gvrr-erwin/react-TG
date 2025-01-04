@@ -6,17 +6,42 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 170px;
-    margin-top: 50px;
+    padding: 10px 20px;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    width: 100%;
+    margin-top: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+#logo {
+    height: 50px;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 60px;
-    font-size: 20px;
+    gap: 20px;
+    font-size: 16px;
     padding: 0;
+    margin: 0;
+    transition: right 0.3s ease;
 }
 
 .nav-menu li {
@@ -26,10 +51,8 @@ html {
 .nav-menu a {
     text-decoration: none;
     color: white;
-    margin: 0;
     padding: 5px 10px;
-    position: relative;
-    transition: color 0.3s, border-bottom 0.3s;
+    transition: color 0.3s;
 }
 
 .nav-menu a.active {
@@ -37,62 +60,48 @@ html {
     border-bottom: 2px solid #DA7C25;
 }
 
-#logo {
-    height: 50px;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+.nav-open {
+    display: none;
+    cursor: pointer;
+    color: white;
 }
 
 .nav-close {
     display: none;
-}
-
-.nav-open {
-    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
 }
 
 @media (max-width: 850px) {
-    .navbar {
-        margin: 20px 50px;
-    }
-
     .nav-open {
         display: block;
+    }
+
+    .nav-menu {
+        flex-direction: column;
         position: fixed;
-        right: 30px;
+        top: 0;
+        right: -350px;
+        width: 350px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 1000;
+        padding-top: 50px;
+    }
+
+    .nav-menu.open {
+        right: 0; /* Show the menu when open */
     }
 
     .nav-close {
         display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 30px;
-        cursor: pointer;
-    }
-
-    .nav-menu {
-        position: fixed;
-        flex-direction: column;
-        align-items: flex-start;
-        top: 0;
-        gap: 30px;
-        background-color: #1F0016;
-        width: 350px;
-        height: 100%;
-        z-index: 2;
-        transition: right 0.5s ease-in-out;
-        right: -350px;
-        padding-top: 50px;
     }
 
     .nav-menu li {
-        font-size: 30px;
-        padding-left: 100px;
+        font-size: 20px;
+        padding: 15px;
     }
 }
