@@ -16,32 +16,37 @@ export const Menu = () => {
   };
 
   return (
-    <div id='menu' className="menu-container">
-      <h1 className="menu-title">Check Our Tasty Menu</h1>
-      <div className="menu-tabs">
-        {Object.keys(menus).map((menu) => (
-          <button
-            key={menu}
-            className={`menu-tab ${activeMenu === menu ? 'active' : ''}`}
-            onClick={() => setActiveMenu(menu)}
-          >
-            {menu}
-          </button>
-        ))}
-      </div>
-      <div className="menu-items">
-        {menus[activeMenu].map((item, index) => (
-          <div key={index} className="menu-item">
-            <div className="menu-image">
-              <img src={item.m_img} alt={item.m_name} />
+    <div id='menu'>
+      <div className="menu-container">
+        <div className="menu-title">
+          <h3>Menu</h3>
+          <h1>Check Our Tasty Menu</h1>
+        </div>
+        <div className="menu-tabs">
+          {Object.keys(menus).map((menu) => (
+            <button
+              key={menu}
+              className={`menu-tab ${activeMenu === menu ? 'active' : ''}`}
+              onClick={() => setActiveMenu(menu)}
+            >
+              {menu}
+            </button>
+          ))}
+        </div>
+        <div className="menu-items">
+          {menus[activeMenu].map((item, index) => (
+            <div key={index} className="menu-item">
+              <div className="menu-image">
+                <img src={item.m_img} alt={item.m_name} />
+              </div>
+              <div className="menu-details">
+                <h3 className="menu-name">{item.m_name}</h3>
+                <p className="menu-desc">{item.m_desc}</p>
+              </div>
+              <div className="menu-price">{item.m_price}</div>
             </div>
-            <div className="menu-details">
-              <h3 className="menu-name">{item.m_name}</h3>
-              <p className="menu-desc">{item.m_desc}</p>
-            </div>
-            <div className="menu-price">{item.m_price}</div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

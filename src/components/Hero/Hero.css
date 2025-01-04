@@ -1,10 +1,6 @@
-html {
-    scroll-behavior: smooth;
-}
-
 .hero {
     margin-top: 120px;
-    margin-left: 50px;
+    margin-left: 100px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -53,7 +49,7 @@ html {
     background: linear-gradient(270deg, #DF8908 10%, #F87429 100%);
 }
 
-.icon-style {
+.hero-icon-style {
     display: flex;
     gap: 10px;
     margin-left: 20px;

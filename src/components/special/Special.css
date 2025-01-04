@@ -52,13 +52,13 @@
   color: #fff;
 }
 
-.menu-list {
+.special-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.menu-item {
+.special-item {
   background-color: #333; /* Default inactive tab color */
   color: #fff;
   border: none;
@@ -69,8 +69,8 @@
   transition: background-color 0.3s ease;
 }
 
-.menu-item.active,
-.menu-item:hover {
+.special-item.active,
+.special-item:hover {
   background-color: #ff6600; /* Active and hover orange color */
 }
 
@@ -121,7 +121,6 @@
   color: #ddd;
 }
 
-/* Image Section */
 .special-image-container {
   display: flex;
   justify-content: center;

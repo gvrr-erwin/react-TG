@@ -1,15 +1,17 @@
   .menu-container {
-    padding: 50px;
+    padding: 100px;
     text-align: center;
+    font-family: serif;
   }
   
-  .menu-title {
+  .menu-title h1{
+    display: block;
     font-size: 40px;
     color: #e47625;
     margin-bottom: 30px;
+    margin-top: 10px;
   }
   
-  /* Tabs */
   .menu-tabs {
     display: flex;
     justify-content: center;
@@ -17,6 +19,7 @@
   }
   
   .menu-tab {
+    font-family: serif;
     background-color: transparent;
     border: none;
     font-size: 20px;
@@ -37,11 +40,10 @@
     color: #e47625;
   }
   
-  /* Menu Items */
   .menu-items {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 20px;
     padding: 20px;
   }
   
@@ -49,13 +51,14 @@
     display: flex;
     align-items: center;
     background-color: #2a1c0a;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 15px;
     transition: transform 0.3s ease-in-out;
   }
   
   .menu-item:hover {
     transform: translateY(-5px);
+    background: #985d3349;
   }
   
   .menu-image img {
@@ -88,7 +91,6 @@
     color: #e47625;
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     .menu-items {
       grid-template-columns: 1fr;

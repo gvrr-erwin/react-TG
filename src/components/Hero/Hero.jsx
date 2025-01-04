@@ -29,7 +29,7 @@ const Hero = () => {
           Our Menu
         </div>
       </div>
-      <div className='icon-style'>
+      <div className='hero-icon-style'>
         <FaFacebookSquare
           onClick={handleFacebookClick}
           style={{

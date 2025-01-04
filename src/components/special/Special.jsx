@@ -41,49 +41,47 @@ const Special = () => {
   const selected = menuItems[selectedItem];
 
   return (
-    <div id="special" className="special-container">
-    {/* Top Section: Titles */}
-    <div className="special-header">
-      <h2>SPECIALS</h2>
-      <h3>Check Our Party Menu</h3>
-    </div>
-  
-    {/* Main Section: Columns */}
-    <div className="special-content">
-      <div className="special-menu">
-        <div className="menu-list">
-          {Object.keys(menuItems).map((item) => (
-            <div
-              key={item}
-              className={`menu-item ${selectedItem === item ? 'active' : ''}`}
-              onClick={() => setSelectedItem(item)}
-            >
-              {item}
+    <div id="special">
+      <div id="special" className="special-container">
+        <div className="special-header">
+          <h2>SPECIALS</h2>
+          <h3>Check Our Party Menu</h3>
+        </div>
+        <div className="special-content">
+          <div className="special-menu">
+            <div className="special-list">
+              {Object.keys(menuItems).map((item) => (
+                <div
+                  key={item}
+                  className={`special-item ${selectedItem === item ? 'active' : ''}`}
+                  onClick={() => setSelectedItem(item)}
+                >
+                  {item}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-  
-      <div className="special-details">
-        <div className="special-text">
-          <h2 className="special-title">
-            {selected.title} <span className="special-price">{selected.price}</span>
-          </h2>
-          <p className="special-description">{selected.description}</p>
-          <h3 className="special-options-title">Options:</h3>
-          <ul className="special-options">
-            {selected.options.map((option, index) => (
-              <li key={index}>{option}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="special-image-container">
-          <img src={selected.image} alt={selected.title} className="special-image" />
+          </div>
+      
+          <div className="special-details">
+            <div className="special-text">
+              <h2 className="special-title">
+                {selected.title} <span className="special-price">{selected.price}</span>
+              </h2>
+              <p className="special-description">{selected.description}</p>
+              <h3 className="special-options-title">Options:</h3>
+              <ul className="special-options">
+                {selected.options.map((option, index) => (
+                  <li key={index}>{option}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="special-image-container">
+              <img src={selected.image} alt={selected.title} className="special-image" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  
   );
 };
 
