@@ -1,51 +1,59 @@
-import React from 'react'
-import './Contact.css'
-import mail_icon from '../../assets/mail-icon.svg'
-import phone_icon from '../../assets/phone-icon.svg'
-import loc_icon from '../../assets/loc-icon.svg'
+import React from 'react';
+import './Contact.css';
+import { FaLocationDot } from "react-icons/fa6";
+import { FaTruck } from "react-icons/fa";
+import { PiPhoneCallFill } from "react-icons/pi";
+import { MdEmail } from "react-icons/md";
 
 const Contact = () => {
   return (
     <div id='contact' className='contact'>
-        <div className="contact-title">
-            <h1>Contact Me</h1>
+      <div className="contact-title">
+        <h3>Contact</h3>
+        <h1>Contact Us</h1>
+      </div>
+      <div className="contact-section">
+        <div className="contact-item">
+          <div className="contact-icon">
+            <FaLocationDot />
+          </div>
+          <div className="contact-details">
+            <h2>Location:</h2>
+            <p>Richmond, Virginia, USA</p>
+          </div>
         </div>
-        <div className="contact-section">
-            <div className="contact-left">
-                <h1>Let's Talk</h1>
-                <p>Contact description</p>
-                <div className="contact-details">
-                    <div className="contact-detail">
-                        <img src={mail_icon} alt="" />
-                        <p>gvrr.erwin@gmail.com</p>
-                    </div>
-                    <div className="contact-detail">
-                        <img src={phone_icon} alt="" />
-                        <p>09498292309</p>
-                    </div>
-                    <div className="contact-detail">
-                        <img src={loc_icon} alt="" />
-                        <p>baliwag, bulacan</p>
-                    </div>
-                </div>
-            </div>
-            <form className="contact-right">
-
-                <label htmlFor="">Your Name</label>
-                <input type="text" placeholder='Enter your name' name='name' />
-               
-                <label htmlFor="">Your Email</label>
-                <input type="text" placeholder='Enter your email' name='email' />
-               
-                <label htmlFor="">Write your message here</label>
-                <textarea name="message" rows={8} placeholder='Enter your message'></textarea>
-                
-                <button type='submit' className="contact-submit">Submit</button>
-           
-            </form>
+        <div className="contact-item">
+          <div className="contact-icon">
+            <FaTruck />
+          </div>
+          <div className="contact-details">
+            <h2>Pop up Truck:</h2>
+            <p>Check our Social Media Accounts:</p>
+            <p>Instagram - tambayangrill_rva</p>
+            <p>Facebook - Tambayan Grill RVA</p>
+          </div>
         </div>
+        <div className="contact-item">
+          <div className="contact-icon">
+            <MdEmail />
+          </div>
+          <div className="contact-details">
+            <h2>Email:</h2>
+            <p>tambayangrillrva@gmail.com</p>
+          </div>
+        </div>
+        <div className="contact-item">
+          <div className="contact-icon">
+            <PiPhoneCallFill />
+          </div>
+          <div className="contact-details">
+            <h2>Call:</h2>
+            <p>+(804)292-9282</p>
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

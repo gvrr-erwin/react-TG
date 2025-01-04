@@ -7,6 +7,7 @@ html {
     align-items: center;
     justify-content: space-between;
     margin: 20px 170px;
+    margin-top: 50px;
 }
 
 .nav-menu {
@@ -40,17 +41,11 @@ html {
     height: 50px;
 }
 
-.nav-connect {
-    padding: 20px 40px;
-    border-radius: 50px;
-    background: linear-gradient(267deg, #DA7C25 0.36%, #b923e1 102.06%);
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.nav-connect:hover {
-    transform: scale(1.05);
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .nav-close {
@@ -64,10 +59,6 @@ html {
 @media (max-width: 850px) {
     .navbar {
         margin: 20px 50px;
-    }
-
-    .nav-connect {
-        display: none;
     }
 
     .nav-open {

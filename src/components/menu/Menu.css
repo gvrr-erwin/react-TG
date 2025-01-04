@@ -1,0 +1,97 @@
+  .menu-container {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .menu-title {
+    font-size: 40px;
+    color: #e47625;
+    margin-bottom: 30px;
+  }
+  
+  /* Tabs */
+  .menu-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .menu-tab {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+    margin: 0 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+  }
+  
+  .menu-tab.active {
+    color: #e47625;
+    border-bottom: 2px solid #e47625;
+  }
+  
+  .menu-tab:hover {
+    color: #e47625;
+  }
+  
+  /* Menu Items */
+  .menu-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    background-color: #2a1c0a;
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .menu-details {
+    flex: 1;
+    padding: 0 15px;
+    text-align: left;
+  }
+  
+  .menu-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .menu-desc {
+    font-size: 14px;
+    color: #d8d8d8;
+  }
+  
+  .menu-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e47625;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .menu-items {
+      grid-template-columns: 1fr;
+    }
+  }
+  

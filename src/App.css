@@ -1,0 +1,38 @@
+.home-view {
+    background-image: url('./assets/Tambayan-Grill.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay; 
+}
+
+.about-view {
+    background-image: url('./assets/about-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: overlay; 
+}
+
+.event-view {
+    background-image: url('./assets/Tambayan-Grill.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay; 
+}

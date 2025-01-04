@@ -1,6 +1,16 @@
-import React from 'react'
-import './About.css'
-import profile_img from '../../assets/logo-new.png'
+import React from 'react';
+import './About.css';
+import profile_img from '../../assets/logo-new.png';
+import { FaFacebookSquare } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+
+const handleFacebookClick = () => {
+    window.open('https://www.facebook.com', '_blank');
+  }
+
+const handleInstagramClick = () => {
+window.open('https://www.instagram.com', '_blank');
+}
 
 const About = () => {
   return (
@@ -10,36 +20,21 @@ const About = () => {
         </div>
         <div className="about-section">
             <div className="about-left">
-                <img src={profile_img} alt="prifle about" />
+                <h2>Tambayan Grill RVA</h2>
+                <p>At Tambayan Grill, we specialize in authentic Filipino cuisine, perfect for event catering and delivery. Whether you're hosting a large gathering or a small celebration, our delicious dishes will bring the flavors of the Philippines right to your doorstep. Let us make your event memorable with our exceptional food and service.</p>
+                <ul>
+                    <li>Pop Up Truck</li>
+                    <li>Event Catering Services by Tambayan Grill</li>
+                    <li>Food Delivery & Pick Up</li>
+                </ul>
+                <div className='icon-style'>
+                    <FaFacebookSquare className="btn-fb" onClick={handleFacebookClick} />
+                    <AiFillInstagram className="btn-insta" onClick={handleInstagramClick} />
+                </div>
             </div>
             <div className="about-righ">
-                <div className="about-para">
-                    <p>just description</p>
-                    <p>another description</p>
-                </div>
-                <div className="about-skills">
-                    <div className="about-skill">
-                        <p>sample skill</p>
-                        <hr style={{width: '50%'}} />
-                    </div>
-                    <div className="about-skill">
-                        <p>sample skill 2</p>
-                        <hr style={{width: '25%'}} />
-                    </div>
-                </div>
+                <img src={profile_img} alt="prifle about" />
             </div>
-        </div>
-        <div className="about-achievements">
-            <div className="about-achievement">
-                <h1>10+</h1>
-                <p>years of experience</p>
-            </div>
-            <hr />
-            <div className="about-achievement">
-                <h1>20+</h1>
-                <p>projects completed</p>
-            </div>
-            <hr />
         </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo-new.png';
 import { ImMenu } from 'react-icons/im';
@@ -16,9 +16,33 @@ const Navbar = () => {
     menuRef.current.style.right = '-350px';
   };
 
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.id;
+          if (entry.isIntersecting) {
+            setActiveLink(id);
+          }
+        });
+      },
+      { threshold: 0.5 } // Adjust this value for when the section is considered visible
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
   return (
     <div className="navbar">
-      <img src={logo} alt="logo" id="logo" />
+      <div className="logo-container">
+        <img src={logo} alt="logo" id="logo" />
+        <h1>Tambayan Grill</h1>
+      </div>
       <div className="nav-open" onClick={openMenu}>
         <ImMenu />
       </div>
@@ -26,7 +50,7 @@ const Navbar = () => {
         <div className="nav-close" onClick={closeMenu}>
           <IoIosCloseCircle />
         </div>
-        {['home', 'about', 'service', 'portfolio', 'contact'].map((item) => (
+        {['home', 'about', 'menu', 'special', 'event', 'contact'].map((item) => (
           <li key={item}>
             <a
               href={`#${item}`}
@@ -38,7 +62,6 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <div className="nav-connect">Connect With Me</div>
     </div>
   );
 };
