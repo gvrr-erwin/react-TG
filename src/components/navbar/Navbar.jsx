@@ -51,7 +51,7 @@ const Navbar = () => {
   return (
     <div
       className={`navbar ${sticky ? 'sticky' : ''}`}
-      style={{ marginTop: sticky ? '0' : '38px' }}
+      style={{ marginTop: sticky ? '0' : '45px' }}
     >
       <div className="logo-container">
         <img src={logo} alt="logo" id="logo" />
