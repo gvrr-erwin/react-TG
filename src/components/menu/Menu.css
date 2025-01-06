@@ -7,7 +7,7 @@
   .menu-title h1{
     display: block;
     font-size: 40px;
-    color: #e47625;
+    color: #ff6600;
     margin-bottom: 30px;
     margin-top: 10px;
   }
@@ -32,12 +32,12 @@
   }
   
   .menu-tab.active {
-    color: #e47625;
-    border-bottom: 2px solid #e47625;
+    color: #ff6600;
+    border-bottom: 2px solid #ff6600;
   }
   
   .menu-tab:hover {
-    color: #e47625;
+    color: #ff6600;
   }
   
   .menu-items {
@@ -88,7 +88,7 @@
   .menu-price {
     font-size: 18px;
     font-weight: bold;
-    color: #e47625;
+    color: #ff6600;
   }
   
   @media (max-width: 768px) {

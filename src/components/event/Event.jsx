@@ -39,25 +39,27 @@ export const Event = () => {
   const { image, title, description } = events[currentSlide];
 
   return (
-    <div id="event" className="event">
-      <div className="event-header">
-        <h1>Events</h1>
-        <h2>Tambayan Grill Events</h2>
-      </div>
-      <div className="event-content">
-        <button className="event-btn event-btn-left" onClick={handlePrev}>
-          ❮
-        </button>
-        <div className="event-image">
-          <img src={image} alt={title} />
+    <div id="event">
+      <div className="event">
+        <div className="event-header">
+          <h1>Events</h1>
+          <h2>Tambayan Grill Events</h2>
         </div>
-        <div className="event-details">
-          <h3>{title}</h3>
-          <p>{description}</p>
+        <div className="event-content">
+          <button className="event-btn event-btn-left" onClick={handlePrev}>
+            ❮
+          </button>
+          <div className="event-image">
+            <img src={image} alt={title} />
+          </div>
+          <div className="event-details">
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </div>
+          <button className="event-btn event-btn-right" onClick={handleNext}>
+            ❯
+          </button>
         </div>
-        <button className="event-btn event-btn-right" onClick={handleNext}>
-          ❯
-        </button>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@
   .contact-title h1 {
     font-size: 50px;
     font-weight: 700;
-    color: #e47625;
+    color: #ff6600;
     margin-bottom: 20px;
   }
   
@@ -37,7 +37,7 @@
   }
   
   .contact-icon {
-    background-color: #e47625; 
+    background-color: #ff6600; 
     color: white;
     padding: 10px;
     border-radius: 50%;
