@@ -42,26 +42,26 @@ const Special = () => {
 
   return (
     <div id="special">
-      <div id="special" className="special-container">
+       <section className="special-container">
         <div className="special-header">
           <h2>SPECIALS</h2>
           <h3>Check Our Party Menu</h3>
         </div>
         <div className="special-content">
+          {/* Left Sidebar */}
           <div className="special-menu">
-            <div className="special-list">
-              {Object.keys(menuItems).map((item) => (
-                <div
-                  key={item}
-                  className={`special-item ${selectedItem === item ? 'active' : ''}`}
-                  onClick={() => setSelectedItem(item)}
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
+            {Object.keys(menuItems).map((item) => (
+              <div
+                key={item}
+                className={`special-item ${selectedItem === item ? 'active' : ''}`}
+                onClick={() => setSelectedItem(item)}
+              >
+                {item}
+              </div>
+            ))}
           </div>
-      
+
+          {/* Right Content */}
           <div className="special-details">
             <div className="special-text">
               <h2 className="special-title">
@@ -80,7 +80,7 @@ const Special = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
