@@ -3,10 +3,12 @@
     background-color: #140b00;
     color: white;
     text-align: left;
+    margin-bottom: 50px;
   }
   
   .contact-title {
     margin-bottom: 50px;
+    margin-top: 80px;
   }
   
   .contact-title h3 {
