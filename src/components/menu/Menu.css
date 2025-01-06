@@ -92,8 +92,60 @@
   }
   
   @media (max-width: 768px) {
+    .menu-container {
+      padding: 50px 20px; /* Reduced padding for smaller screens */
+    }
+  
+    .menu-title h1 {
+      font-size: 30px; /* Reduced title size for better fit */
+      margin-bottom: 20px;
+    }
+  
+    .menu-tabs {
+      flex-wrap: wrap; /* Allows tabs to wrap on smaller screens */
+      gap: 10px;
+      justify-content: center;
+    }
+  
+    .menu-tab {
+      font-size: 16px; /* Smaller font for tabs */
+      padding: 8px 15px;
+    }
+  
     .menu-items {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* Single column for smaller screens */
+      gap: 15px; /* Reduced gap between items */
+    }
+  
+    .menu-item {
+      align-items: center; /* Center-align content */
+      text-align: center; /* Center text */
+      padding: 20px; /* Increased padding for better touch targets */
+    }
+  
+    .menu-image img {
+      width: 70px; /* Slightly smaller images */
+      height: 70px;
+      margin-bottom: 10px; /* Adds space between image and text */
+    }
+  
+    .menu-details {
+      padding: 0; /* Remove extra padding for centered layout */
+    }
+  
+    .menu-name {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+  
+    .menu-desc {
+      font-size: 12px;
+      color: #bfbfbf; /* Slightly lighter text for description */
+    }
+  
+    .menu-price {
+      font-size: 16px; /* Consistent font size for pricing */
     }
   }
+  
   
