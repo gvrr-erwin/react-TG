@@ -1,9 +1,8 @@
 .contact {
     padding: 50px 100px;
-    background-color: #140b00;
+    background-color: #070400;
     color: white;
     text-align: left;
-    margin-bottom: 50px;
   }
   
   .contact-title {
@@ -67,7 +66,7 @@
     }
   
     .contact-section {
-      grid-template-columns: 1fr; /* Single column on smaller screens */
+      grid-template-columns: 1fr 1fr; /* Single column on smaller screens */
       gap: 30px;
     }
   

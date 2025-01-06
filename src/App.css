@@ -44,3 +44,10 @@ html, body {
     background-color: rgba(0, 0, 0, 0.6);
     background-blend-mode: overlay; 
 }
+
+.footer-view {
+    padding: 25px 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}

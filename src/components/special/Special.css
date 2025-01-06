@@ -1,7 +1,7 @@
 .special-container {
   display: flex;
   flex-direction: column;
-  background-color: #170b00;
+  background-color: #070400;
   color: #fff;
   margin-top: 120px;
   padding: 4rem;
@@ -120,5 +120,24 @@
 
   .special-image-container {
     margin: 0 auto;
+  }
+
+  .special-options-title {
+    text-align: center; /* Centers the title text */
+    font-size: 18px; /* Adjusts the font size for smaller screens */
+    margin-bottom: 15px; /* Adds spacing below the title */
+    color: #ff6600;
+  }
+
+  .special-options {
+    list-style: none; /* Removes default list styling */
+    display: flex;
+    align-items: center; /* Centers items horizontally */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers items within the parent */
+    text-align: center;
+    gap: 10px; /* Adds spacing between the items */
+    padding: 0; /* Removes default padding */
+    margin-top: 10px; /* Adds spacing above the list */
   }
 }

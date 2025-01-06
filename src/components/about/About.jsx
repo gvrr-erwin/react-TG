@@ -31,7 +31,7 @@ const About = () => {
                         <li><GiPartyPopper className='list-icon' />Event Catering Services by Tambayan Grill</li>
                         <li><GiPaperBagFolded className='list-icon' />Food Delivery & Pick Up</li>
                     </ul>
-                    <div className='icon-style'>
+                    <div className='about-icon-style'>
                         <FaFacebookSquare
                         onClick={handleFacebookClick}
                         style={{

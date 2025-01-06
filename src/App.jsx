@@ -27,7 +27,9 @@ const App = () => {
         <Event />
       </div>
       <Contact />
-      <Footer />
+      <div className="footer-view">
+        <Footer />
+      </div>
     </div>
   );
 };
