@@ -13,11 +13,11 @@ const Hero = () => {
   };
 
   const handleFacebookClick = () => {
-    window.open('https://www.facebook.com', '_blank');
+    window.open('https://www.facebook.com/profile.php?id=61571327565892', '_blank');
   };
 
   const handleInstagramClick = () => {
-    window.open('https://www.instagram.com', '_blank');
+    window.open('https://www.instagram.com/tambayangrillrva/', '_blank');
   };
 
   return (

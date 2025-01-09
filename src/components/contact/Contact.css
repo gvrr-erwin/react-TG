@@ -55,6 +55,14 @@
     color: #d8d8d8;
     margin: 5px 0;
   }
+
+  .contact-details a {
+    color: #ff6600;
+  }
+
+  .contact-details a p {
+    color: #ff6600;
+  }
   
   @media (max-width: 850px) {
     .contact {

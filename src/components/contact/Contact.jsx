@@ -30,8 +30,8 @@ const Contact = () => {
             <div className="contact-details">
               <h2>Pop up Truck:</h2>
               <p>Check our Social Media Accounts:</p>
-              <p>Instagram - tambayangrill_rva</p>
-              <p>Facebook - Tambayan Grill RVA</p>
+              <a href="https://www.instagram.com/tambayangrillrva/"><p>Instagram - tambayangrill_rva</p></a>
+              <a href="https://www.facebook.com/profile.php?id=61571327565892"><p>Facebook - Tambayan Grill RVA</p></a>
             </div>
           </div>
           <div className="contact-item">
