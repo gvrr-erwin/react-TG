@@ -34,7 +34,7 @@ const Pork_Menu = [
         m_img: Pork_Lumpia
     },
     {
-        m_price: "$70",
+        m_price: "$75",
         m_name: "Pork Adobo",
         m_desc: "Tender pork marinated in a savory blend of soy sauce, vinegar, garlic and bay leaves.",
         m_img: Pork_Adobo

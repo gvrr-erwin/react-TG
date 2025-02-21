@@ -8,11 +8,11 @@ import { FaTruckFront } from "react-icons/fa6";
 import { GiPaperBagFolded } from "react-icons/gi";
 
 const handleFacebookClick = () => {
-    window.open('https://www.facebook.com', '_blank');
+    window.open('https://www.facebook.com/profile.php?id=61571327565892', '_blank');
   }
 
 const handleInstagramClick = () => {
-window.open('https://www.instagram.com', '_blank');
+window.open('https://www.instagram.com/tambayangrillrva/', '_blank');
 }
 
 const About = () => {
