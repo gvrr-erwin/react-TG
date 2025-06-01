@@ -26,6 +26,7 @@ export const Menu = () => {
           {Object.keys(menus).map((menu) => (
             <button
               key={menu}
+              type="button"
               className={`menu-tab ${activeMenu === menu ? 'active' : ''}`}
               onClick={() => setActiveMenu(menu)}
             >
