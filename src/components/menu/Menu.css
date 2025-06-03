@@ -2,6 +2,8 @@
   padding: 100px;
   text-align: center;
   font-family: serif;
+  position: relative; /* ensure children can layer properly */
+  z-index: 1;         /* put container just above any background elements */
 }
 
 .menu-title h1 {
@@ -16,8 +18,9 @@
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
-  position: relative;
-  z-index: 10;
+  position: relative;   /* keep tabs at their own stacking context */
+  z-index: 10;          /* ensure tabs sit above the .menu-items grid */
+  background: transparent;
 }
 
 .menu-tab {
@@ -31,7 +34,7 @@
   cursor: pointer;
   border-bottom: 2px solid transparent;
   transition: all 0.3s;
-  touch-action: manipulation;
+  touch-action: manipulation; /* needed for mobile “click” to register */
 }
 
 .menu-tab.active {
@@ -43,12 +46,15 @@
   color: #ff6600;
 }
 
+/* ===== THIS IS THE ORIGINAL MENU-ITEMS DESIGN ===== */
 .menu-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   padding: 20px;
   margin-top: 20px; /* ensures items don’t overlap tabs */
+  position: relative; /* keep on its own layer */
+  z-index: 1;         /* below .menu-tabs */
 }
 
 .menu-item {
@@ -95,11 +101,12 @@
   color: #ff6600;
 }
 
+/* ===== RESPONSIVE (MOBILE) ===== */
 @media (max-width: 768px) {
   .menu-container {
     padding: 50px 20px;
     position: relative;
-    z-index: 20; /* still above everything */
+    z-index: 1;
   }
 
   .menu-title h1 {
@@ -111,7 +118,7 @@
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    /* no need to re‐declare z-index (it inherits from parent) */
+    /* inherits position & z-index from above */
   }
 
   .menu-tab {
@@ -121,8 +128,8 @@
 
   .menu-items {
     grid-template-columns: 1fr; /* single column on mobile */
-    gap: 15px; /* smaller gap between items */
-    margin-top: 20px; /* breathing room under tabs */
+    gap: 15px;                  /* smaller gap between items */
+    margin-top: 20px;           /* breathing room under tabs */
   }
 
   .menu-item {
@@ -132,7 +139,7 @@
   }
 
   .menu-image img {
-    width: 70px; /* slightly smaller on mobile */
+    width: 70px;  /* slightly smaller on mobile */
     height: 70px;
     margin-bottom: 10px; /* space between image & text */
   }
@@ -155,4 +162,3 @@
     font-size: 16px; /* consistent pricing font */
   }
 }
-
